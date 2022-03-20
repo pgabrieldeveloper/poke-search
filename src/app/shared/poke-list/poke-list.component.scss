@@ -4,9 +4,13 @@
 :host {
   display: flex;
   justify-content: space-between;
-
+  flex-wrap: wrap;
   .pokemon{
+    text-decoration: none;
+    color: var(--primary-color);
     position: relative;
+    margin-top: rem-calc.rem-calc(10);
+    margin-bottom: rem-calc.rem-calc(10);
     display: flex;
     width: rem-calc.rem-calc(290 - 40);
     padding: rem-calc.rem-calc(20);
@@ -15,6 +19,7 @@
     height: rem-calc.rem-calc(157 - 40);
     &_status{
       h2{
+        text-transform: capitalize;
         font-weight: 700;
         font-size: rem-calc.rem-calc(22);
         font-style: italic;
@@ -26,6 +31,7 @@
         justify-content: center;
         align-items: center;
         li{
+          margin-bottom: rem-calc.rem-calc(5);
           background-color: #EFEFEF;
           display: flex;
           justify-content: center;
@@ -45,8 +51,10 @@
       bottom: rem-calc.rem-calc(20);
       right: rem-calc.rem-calc(20);
       height: rem-calc.rem-calc(90);
-      width: rem-calc.rem-calc(110);
       background: url("../../../assets/bg/bg-pokemon.svg") no-repeat;
+      img {
+        width: rem-calc.rem-calc(75);
+      }
     }
   }
 }
