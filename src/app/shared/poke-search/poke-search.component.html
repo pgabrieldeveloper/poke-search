@@ -1,4 +1,4 @@
 <form>
-  <input type="text" placeholder="Buscar Pokemon...">
+  <input type="text" #texto (keyup)="searchEventEmiter(texto.value)" placeholder="Buscar Pokemon...">
   <img src="../../../assets/icons/busca-pokemon.svg" alt="buscar pokemon">
 </form>
