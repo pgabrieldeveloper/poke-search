@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {ActivatedRoute} from "@angular/router";
 import {PokeApiService} from "../../service/poke-api.service";
-import {forkJoin, Observable} from "rxjs";
+import {forkJoin,} from "rxjs";
 
 @Component({
   selector: 'app-details',
@@ -14,7 +14,7 @@ export class DetailsComponent implements OnInit {
   private urlName: string = 'https://pokeapi.co/api/v2/pokemon-species';
   public pokemon:any;
   public loading: boolean = false;
-  public error: boolean = false;
+  public haveError: boolean = false;
 
   constructor(
     private activeRouter: ActivatedRoute,
@@ -34,7 +34,7 @@ export class DetailsComponent implements OnInit {
         this.loading = true;
         return;
       }, error: err => {
-        this.error = true;
+        this.haveError = true;
         return;
       }})
 

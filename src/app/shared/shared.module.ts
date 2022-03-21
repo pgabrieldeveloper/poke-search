@@ -16,11 +16,12 @@ import { PokeErrorComponent } from './poke-error/poke-error.component';
     PokeListComponent,
     PokeErrorComponent
   ],
-  exports: [
-    PokeHeaderComponent,
-    PokeSearchComponent,
-    PokeListComponent
-  ],
+    exports: [
+        PokeHeaderComponent,
+        PokeSearchComponent,
+        PokeListComponent,
+        PokeErrorComponent
+    ],
   imports: [
     CommonModule,
     HttpClientModule,
