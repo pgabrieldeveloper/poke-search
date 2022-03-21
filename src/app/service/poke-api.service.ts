@@ -21,7 +21,7 @@ export class PokeApiService {
       }),
     );
   }
-  private apiGetPokemons(url:string): Observable<any> {
+  public apiGetPokemons(url:string): Observable<any> {
     return this.http.get<any>(url).pipe(
       res => res,
       error => error,
