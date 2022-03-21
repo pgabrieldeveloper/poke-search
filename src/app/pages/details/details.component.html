@@ -1,5 +1,5 @@
 <main>
-  <section *ngIf="!haveError && loading; else error">
+  <section *ngIf="loading; else carregando">
     <section class="pokemon_names fadeInRight">
       <h1>{{pokemon[0].name}}</h1>
       <h2> {{pokemon[1].names[0].name}}</h2>
@@ -22,13 +22,12 @@
       </article>
     </section>
   </section>
+  <ng-template #carregando>
+    <section class="carregando" *ngIf="!haveError; else error">
+      Carregando Pokemons...
+    </section>
+  </ng-template>
   <ng-template #error>
     <app-poke-error></app-poke-error>
   </ng-template>
-  <section class="carregando" *ngIf="!loading">
-    Carregando Pokemons...
-  </section>
-
-
-
 </main>
