@@ -1,5 +1,5 @@
 <app-poke-search (searchEmiter)="getSearch($event)" ></app-poke-search>
-<section class="listagem">
+<section *ngIf="loading; else carregando" class="listagem">
   <ng-template ngFor let-pokemon [ngForOf]="pokemons" ]>
     <a [routerLink]="['details', pokemon.status.id]" class="pokemon" *ngIf="pokemon.status">
       <section class="pokemon_status">
@@ -18,6 +18,19 @@
     </a>
   </ng-template>
 </section>
+
+<ng-template #carregando>
+  <section class="carregando" *ngIf="!haveError; else error">
+    Carregando Pokemons...
+  </section>
+</ng-template>
+<ng-template #error>
+  <app-poke-error></app-poke-error>
+</ng-template>
+
+
+
+
 
 
 

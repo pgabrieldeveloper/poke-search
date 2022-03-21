@@ -24,10 +24,12 @@
   </section>
   <ng-template #carregando>
     <section class="carregando" *ngIf="!haveError; else error">
-      Carregando Pokemons...
+      Carregando Detalhes do pokemon...
     </section>
   </ng-template>
   <ng-template #error>
     <app-poke-error></app-poke-error>
   </ng-template>
 </main>
+
+

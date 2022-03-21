@@ -2,6 +2,17 @@
 @use "src/config-scss/rem-calc";
 
 :host {
+
+  .carregando{
+    background-color: var(--branco);
+    width: 100%;
+    height: rem-calc.rem-calc(400);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: rem-calc.rem-calc(40);
+    border-radius: rem-calc.rem-calc(10);
+  }
   .listagem
   {
     display: flex;
@@ -60,5 +71,6 @@
       }
     }
   }
+
 }
 
